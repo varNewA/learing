@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export2.dtd">
+<en-export export-date="20190625T082835Z" application="Evernote/Windows" version="6.x">
+<note><title>Git指令</title><content><![CDATA[<!DOCTYPE en-note SYSTEM 'http://xml.evernote.com/pub/enml2.dtd'><en-note><div style="font-size: 14px; margin: 0; padding: 0; width: 100%;"><h1 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 41px; border-bottom: 3px double #999; color: #000; margin-top: 14px;">Git指令</h1>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">Git基本指令</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">创建git库</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git init
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">添加文件到Git仓库</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git add &lt;file&gt;
+git commit -m &lt;message&gt;
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">显示工作区状态</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git status
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">可查看文件修改内容（通过status得知）</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git diff
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">查看提交历史（可用于回退前查看）</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git log
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">版本回退</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git reset --hard commit_id
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">重返未来</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git reflog
+</code></pre>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">工作区与版本库</strong><br/>
+<en-media hash="701e02bf0b2d71ab51b7e2b6aa973d52" type="image/jpeg"  /></p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">切换至另一个分支（例：切换到dev分支）</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git checkout &lt;dev&gt;
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">直接丢弃工作区的修改</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git checkout -- file
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">不但改乱了工作区某个文件的内容，还添加到了暂存区时</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git reset HEAD &lt;file&gt;
+</code></pre>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git checkout -- file
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">删除一个文件</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git rm
+</code></pre>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">远程仓库</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">关联一个远程库</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git remote add &lt;远程库名字&gt; &lt;github的SSH&gt;
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">第一次推送master分支的所有内容</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git push -u &lt;远程库名字&gt; master
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">此后，每次本地提交后，只要有必要，就可以使用命令<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git push origin master</code>推送最新修改；</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">克隆一个仓库</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git clone &lt;github的SSH&gt;
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">[git gui 教程(连接远程库前，需先克隆)](%3Ca href="https://jingyan.baidu.com/article/19020a0a7ae6af529c284248.html"%3Ehttps://jingyan.baidu.com/article/19020a0a7ae6af529c284248.html%3C/a%3E)</p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">分支管理</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">查看分支：<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git branch</code><br/>
+创建分支：<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git branch &lt;name&gt;</code><br/>
+切换分支：<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git checkout &lt;name&gt;</code><br/>
+创建+切换分支：<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git checkout -b &lt;name&gt;</code><br/>
+合并某分支到当前分支：<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git merge &lt;name&gt;</code><br/>
+删除分支：<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git branch -d &lt;name&gt;</code><br/>
+用<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git log --graph</code>命令可以看到分支合并图。</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">BUG修复</strong></p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；当手头工作没有完成时，先把工作现场<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git stash</code>一下，然后去修复bug，修复后，再<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git stash pop</code>，回到工作现场。</p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">如果要丢弃一个没有被合并过的分支，可以通过<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git branch -D &lt;name&gt;</code>强行删除。</p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">多人合作</strong></p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">查看远程库信息，使用<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git remote -v</code>；</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">本地新建的分支如果不推送到远程，对其他人就是不可见的；</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">从本地推送分支，使用<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git push origin &lt;branch-name&gt;</code>，如果推送失败，先用<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git pull</code>抓取远程的新提交；</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">在本地创建和远程分支对应的分支，使用<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git checkout -b &lt;branch-name&gt; &lt;远程库名字&gt;/&lt;branch-name&gt;</code>，本地和远程分支的名称最好一致；</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">建立本地分支和远程分支的关联，使用<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git branch --set-upstream&lt;branch-name&gt; &lt;远程库名字&gt;&lt;/branch-name&gt;</code>；</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">从远程抓取分支，使用<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">git pull</code>，如果有冲突，要先处理冲突。</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">Rebase</strong><br/>
+rebase操作可以把本地未push的分叉提交历史整理成直线；<br/>
+rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。</p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">标签管理</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">新建一个标签，默认为<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">HEAD</code>，也可以指定一个commit id；</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git tag &lt;tagname&gt;
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">指定标签信息</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git tag -a &lt;tagname&gt; -m "blablabla..."
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">查看所有标签</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git tag
+</code></pre>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">推送一个本地标签</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git push origin &lt;tagname&gt;
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">推送全部未推送过的本地标签</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git push origin --tags
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">删除一个本地标签</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git tag -d &lt;tagname&gt;
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">删除一个远程标签</strong></p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">git push origin :refs/tags/&lt;tagname&gt;
+</code></pre>
+</div><center style='display:none !important;visibility:collapse !important;height:0 !important;white-space:nowrap;width:100%;overflow:hidden'>%23%20Git%E6%8C%87%E4%BB%A4%0A%23%23%23%23%20Git%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4%0A**%E5%88%9B%E5%BB%BAgit%E5%BA%93**%0A%60%60%60%0Agit%20init%0A%60%60%60%0A%0A**%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E5%88%B0Git%E4%BB%93%E5%BA%93**%0A%60%60%60%0Agit%20add%20%3Cfile%3E%0Agit%20commit%20-m%20%3Cmessage%3E%0A%60%60%60%0A**%E6%98%BE%E7%A4%BA%E5%B7%A5%E4%BD%9C%E5%8C%BA%E7%8A%B6%E6%80%81**%0A%60%60%60%0Agit%20status%0A%60%60%60%0A**%E5%8F%AF%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%86%85%E5%AE%B9%EF%BC%88%E9%80%9A%E8%BF%87status%E5%BE%97%E7%9F%A5%EF%BC%89**%0A%60%60%60%0Agit%20diff%0A%60%60%60%0A**%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2%EF%BC%88%E5%8F%AF%E7%94%A8%E4%BA%8E%E5%9B%9E%E9%80%80%E5%89%8D%E6%9F%A5%E7%9C%8B%EF%BC%89**%0A%60%60%60%0Agit%20log%0A%60%60%60%0A**%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80**%0A%60%60%60%0Agit%20reset%20--hard%20commit_id%0A%60%60%60%0A**%E9%87%8D%E8%BF%94%E6%9C%AA%E6%9D%A5**%0A%60%60%60%0Agit%20reflog%0A%60%60%60%0A%0A*%20*%20*%0A%0A**%E5%B7%A5%E4%BD%9C%E5%8C%BA%E4%B8%8E%E7%89%88%E6%9C%AC%E5%BA%93**%0A!%5B701e02bf0b2d71ab51b7e2b6aa973d52.jpeg%5D(en-resource%3A%2F%2Fdatabase%2F690%3A0)%0A%0A*%20*%20*%0A**%E5%88%87%E6%8D%A2%E8%87%B3%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF%EF%BC%88%E4%BE%8B%EF%BC%9A%E5%88%87%E6%8D%A2%E5%88%B0dev%E5%88%86%E6%94%AF%EF%BC%89**%0A%60%60%60%0Agit%20checkout%20%3Cdev%3E%0A%60%60%60%0A%0A**%E7%9B%B4%E6%8E%A5%E4%B8%A2%E5%BC%83%E5%B7%A5%E4%BD%9C%E5%8C%BA%E7%9A%84%E4%BF%AE%E6%94%B9**%0A%60%60%60%0Agit%20checkout%20--%20file%0A%60%60%60%0A%0A**%E4%B8%8D%E4%BD%86%E6%94%B9%E4%B9%B1%E4%BA%86%E5%B7%A5%E4%BD%9C%E5%8C%BA%E6%9F%90%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%8C%E8%BF%98%E6%B7%BB%E5%8A%A0%E5%88%B0%E4%BA%86%E6%9A%82%E5%AD%98%E5%8C%BA%E6%97%B6**%0A%60%60%60%0Agit%20reset%20HEAD%20%3Cfile%3E%0A%60%60%60%0A%60%60%60%0Agit%20checkout%20--%20file%0A%60%60%60%0A%0A**%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6**%0A%60%60%60%0Agit%20rm%0A%60%60%60%0A%0A*%20*%20*%0A%23%23%23%23%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%0A%0A**%E5%85%B3%E8%81%94%E4%B8%80%E4%B8%AA%E8%BF%9C%E7%A8%8B%E5%BA%93**%0A%60%60%60%0Agit%20remote%20add%20%3C%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%90%8D%E5%AD%97%3E%20%3Cgithub%E7%9A%84SSH%3E%0A%60%60%60%0A**%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81master%E5%88%86%E6%94%AF%E7%9A%84%E6%89%80%E6%9C%89%E5%86%85%E5%AE%B9**%0A%60%60%60%0Agit%20push%20-u%20%3C%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%90%8D%E5%AD%97%3E%20master%0A%60%60%60%0A%0A%E6%AD%A4%E5%90%8E%EF%BC%8C%E6%AF%8F%E6%AC%A1%E6%9C%AC%E5%9C%B0%E6%8F%90%E4%BA%A4%E5%90%8E%EF%BC%8C%E5%8F%AA%E8%A6%81%E6%9C%89%E5%BF%85%E8%A6%81%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%60git%20push%20origin%20master%60%E6%8E%A8%E9%80%81%E6%9C%80%E6%96%B0%E4%BF%AE%E6%94%B9%EF%BC%9B%0A%0A%0A**%E5%85%8B%E9%9A%86%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93**%0A%60%60%60%0Agit%20clone%20%3Cgithub%E7%9A%84SSH%3E%0A%60%60%60%0A%5Bgit%20gui%20%E6%95%99%E7%A8%8B(%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%89%8D%EF%BC%8C%E9%9C%80%E5%85%88%E5%85%8B%E9%9A%86)%5D(%253Ca%20href%3D%22https%3A%2F%2Fjingyan.baidu.com%2Farticle%2F19020a0a7ae6af529c284248.html%22%253Ehttps%3A%2F%2Fjingyan.baidu.com%2Farticle%2F19020a0a7ae6af529c284248.html%253C%2Fa%253E)%0A%0A*%20*%20*%0A%23%23%23%23%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%0A%0A%E6%9F%A5%E7%9C%8B%E5%88%86%E6%94%AF%EF%BC%9A%60git%20branch%60%0A%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%EF%BC%9A%60git%20branch%20%3Cname%3E%60%0A%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%EF%BC%9A%60git%20checkout%20%3Cname%3E%60%0A%E5%88%9B%E5%BB%BA%2B%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%EF%BC%9A%60git%20checkout%20-b%20%3Cname%3E%60%0A%E5%90%88%E5%B9%B6%E6%9F%90%E5%88%86%E6%94%AF%E5%88%B0%E5%BD%93%E5%89%8D%E5%88%86%E6%94%AF%EF%BC%9A%60git%20merge%20%3Cname%3E%60%0A%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF%EF%BC%9A%60git%20branch%20-d%20%3Cname%3E%60%0A%E7%94%A8%60git%20log%20--graph%60%E5%91%BD%E4%BB%A4%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%E5%9B%BE%E3%80%82%0A%0A**BUG%E4%BF%AE%E5%A4%8D**%0A%0A%E4%BF%AE%E5%A4%8Dbug%E6%97%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E4%BC%9A%E9%80%9A%E8%BF%87%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84bug%E5%88%86%E6%94%AF%E8%BF%9B%E8%A1%8C%E4%BF%AE%E5%A4%8D%EF%BC%8C%E7%84%B6%E5%90%8E%E5%90%88%E5%B9%B6%EF%BC%8C%E6%9C%80%E5%90%8E%E5%88%A0%E9%99%A4%EF%BC%9B%E5%BD%93%E6%89%8B%E5%A4%B4%E5%B7%A5%E4%BD%9C%E6%B2%A1%E6%9C%89%E5%AE%8C%E6%88%90%E6%97%B6%EF%BC%8C%E5%85%88%E6%8A%8A%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA%60git%20stash%60%E4%B8%80%E4%B8%8B%EF%BC%8C%E7%84%B6%E5%90%8E%E5%8E%BB%E4%BF%AE%E5%A4%8Dbug%EF%BC%8C%E4%BF%AE%E5%A4%8D%E5%90%8E%EF%BC%8C%E5%86%8D%60git%20stash%20pop%60%EF%BC%8C%E5%9B%9E%E5%88%B0%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA%E3%80%82%0A%0A*%20*%20*%0A%0A%E6%AF%8F%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%B0%E5%8A%9F%E8%83%BD%EF%BC%8C%E6%9C%80%E5%A5%BD%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AAfeature%E5%88%86%E6%94%AF%EF%BC%8C%E5%9C%A8%E4%B8%8A%E9%9D%A2%E5%BC%80%E5%8F%91%EF%BC%8C%E5%AE%8C%E6%88%90%E5%90%8E%EF%BC%8C%E5%90%88%E5%B9%B6%EF%BC%8C%E6%9C%80%E5%90%8E%EF%BC%8C%E5%88%A0%E9%99%A4%E8%AF%A5feature%E5%88%86%E6%94%AF%E3%80%82%0A%0A%E5%A6%82%E6%9E%9C%E8%A6%81%E4%B8%A2%E5%BC%83%E4%B8%80%E4%B8%AA%E6%B2%A1%E6%9C%89%E8%A2%AB%E5%90%88%E5%B9%B6%E8%BF%87%E7%9A%84%E5%88%86%E6%94%AF%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%60git%20branch%20-D%20%3Cname%3E%60%E5%BC%BA%E8%A1%8C%E5%88%A0%E9%99%A4%E3%80%82%0A%0A*%20*%20*%0A**%E5%A4%9A%E4%BA%BA%E5%90%88%E4%BD%9C**%0A%0A*%20%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%BA%93%E4%BF%A1%E6%81%AF%EF%BC%8C%E4%BD%BF%E7%94%A8%60git%20remote%20-v%60%EF%BC%9B%0A*%20%E6%9C%AC%E5%9C%B0%E6%96%B0%E5%BB%BA%E7%9A%84%E5%88%86%E6%94%AF%E5%A6%82%E6%9E%9C%E4%B8%8D%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%EF%BC%8C%E5%AF%B9%E5%85%B6%E4%BB%96%E4%BA%BA%E5%B0%B1%E6%98%AF%E4%B8%8D%E5%8F%AF%E8%A7%81%E7%9A%84%EF%BC%9B%0A*%20%E4%BB%8E%E6%9C%AC%E5%9C%B0%E6%8E%A8%E9%80%81%E5%88%86%E6%94%AF%EF%BC%8C%E4%BD%BF%E7%94%A8%60git%20push%20origin%20%3Cbranch-name%3E%60%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%8E%A8%E9%80%81%E5%A4%B1%E8%B4%A5%EF%BC%8C%E5%85%88%E7%94%A8%60git%20pull%60%E6%8A%93%E5%8F%96%E8%BF%9C%E7%A8%8B%E7%9A%84%E6%96%B0%E6%8F%90%E4%BA%A4%EF%BC%9B%0A*%20%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%88%9B%E5%BB%BA%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E7%9A%84%E5%88%86%E6%94%AF%EF%BC%8C%E4%BD%BF%E7%94%A8%60git%20checkout%20-b%20%3Cbranch-name%3E%20%3C%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%90%8D%E5%AD%97%3E%2F%3Cbranch-name%3E%60%EF%BC%8C%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E7%9A%84%E5%90%8D%E7%A7%B0%E6%9C%80%E5%A5%BD%E4%B8%80%E8%87%B4%EF%BC%9B%0A*%20%E5%BB%BA%E7%AB%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E7%9A%84%E5%85%B3%E8%81%94%EF%BC%8C%E4%BD%BF%E7%94%A8%60git%20branch%20--set-upstream%3Cbranch-name%3E%20%3C%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%90%8D%E5%AD%97%3E%3C%2Fbranch-name%3E%60%EF%BC%9B%0A*%20%E4%BB%8E%E8%BF%9C%E7%A8%8B%E6%8A%93%E5%8F%96%E5%88%86%E6%94%AF%EF%BC%8C%E4%BD%BF%E7%94%A8%60git%20pull%60%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%9C%89%E5%86%B2%E7%AA%81%EF%BC%8C%E8%A6%81%E5%85%88%E5%A4%84%E7%90%86%E5%86%B2%E7%AA%81%E3%80%82%0A%0A**Rebase**%0Arebase%E6%93%8D%E4%BD%9C%E5%8F%AF%E4%BB%A5%E6%8A%8A%E6%9C%AC%E5%9C%B0%E6%9C%AApush%E7%9A%84%E5%88%86%E5%8F%89%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2%E6%95%B4%E7%90%86%E6%88%90%E7%9B%B4%E7%BA%BF%EF%BC%9B%0Arebase%E7%9A%84%E7%9B%AE%E7%9A%84%E6%98%AF%E4%BD%BF%E5%BE%97%E6%88%91%E4%BB%AC%E5%9C%A8%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E6%8F%90%E4%BA%A4%E7%9A%84%E5%8F%98%E5%8C%96%E6%97%B6%E6%9B%B4%E5%AE%B9%E6%98%93%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%88%86%E5%8F%89%E7%9A%84%E6%8F%90%E4%BA%A4%E9%9C%80%E8%A6%81%E4%B8%89%E6%96%B9%E5%AF%B9%E6%AF%94%E3%80%82%0A%0A*%20*%20*%0A%23%23%23%23%20%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86%0A%0A**%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%A0%87%E7%AD%BE%EF%BC%8C%E9%BB%98%E8%AE%A4%E4%B8%BA%60HEAD%60%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%8C%87%E5%AE%9A%E4%B8%80%E4%B8%AAcommit%20id%EF%BC%9B**%0A%60%60%60%0Agit%20tag%20%3Ctagname%3E%0A%60%60%60%0A**%E6%8C%87%E5%AE%9A%E6%A0%87%E7%AD%BE%E4%BF%A1%E6%81%AF**%0A%60%60%60%0Agit%20tag%20-a%20%3Ctagname%3E%20-m%20%22blablabla...%22%0A%60%60%60%0A**%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E6%A0%87%E7%AD%BE**%0A%60%60%60%0Agit%20tag%0A%60%60%60%0A*%20*%20*%0A%0A**%E6%8E%A8%E9%80%81%E4%B8%80%E4%B8%AA%E6%9C%AC%E5%9C%B0%E6%A0%87%E7%AD%BE**%0A%60%60%60%0Agit%20push%20origin%20%3Ctagname%3E%0A%60%60%60%0A**%E6%8E%A8%E9%80%81%E5%85%A8%E9%83%A8%E6%9C%AA%E6%8E%A8%E9%80%81%E8%BF%87%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%A0%87%E7%AD%BE**%0A%60%60%60%0Agit%20push%20origin%20--tags%0A%60%60%60%0A**%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E6%9C%AC%E5%9C%B0%E6%A0%87%E7%AD%BE**%0A%60%60%60%0Agit%20tag%20-d%20%3Ctagname%3E%0A%60%60%60%0A**%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E8%BF%9C%E7%A8%8B%E6%A0%87%E7%AD%BE**%0A%60%60%60%0Agit%20push%20origin%20%3Arefs%2Ftags%2F%3Ctagname%3E%0A%60%60%60</center></en-note>]]></content><created>20190625T073234Z</created><updated>20190625T081813Z</updated><note-attributes><author>OF.</author><source>desktop.win</source><source-url>https://www.liaoxuefeng.com/wiki/896043488029600/896827951938304</source-url><source-application>yinxiang.win32</source-application><content-class>yinxiang.markdown</content-class></note-attributes><resource><data encoding="base64">
+/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADqAcoDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD0g/GD
+wCCQfEcIIJBBhl6j/gNbfh3xhoHiz7T/AGHqUd59m2+dsRl2bs7fvAddp/Kue+C8jS/CbRZH+87X
+DHHqbiSu9oAwPFFnINI1HUINQvraeCzkaMQzbVDKpIO3GCc1YhsLmwsp7iznub27aH91FeXJ8stj
+I5wdvPfBqtq/hu81c3cZ8TarbWlyhja1gjttiqVwQC0Jbnn+LvVnS9IvdPuDJceIdR1CPZsENzHb
+qoPHOY4lOeMdcc0DPNbdfEC2Xh28McS51N5Z2iQSte3cgmDuFLLhUAwu4+nA2jPW6hb6rqtvp9tN
+eXVrdSC4dMs9thlACeYIZclepxu7+oq5L4OhutE0vS75re6t7S8NzLHNbh0mB8z5SpJHVwec/d/K
+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
+vUtN0nTTpdoTp9r/AKhP+WK/3R7UAf/Z
+</data><mime>image/jpeg</mime><recognition><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE recoIndex PUBLIC "SYSTEM" "http://xml.evernote.com/pub/recoIndex.dtd"><recoIndex docType="unknown" objType="image" objID="701e02bf0b2d71ab51b7e2b6aa973d52" engineVersion="7.0.24.1" recoType="service" lang="zh" objWidth="458" objHeight="234"><item x="18" y="0" w="37" h="11"><t w="48">工作区</t><t w="43">工作裝</t><t w="36">王作区</t><t w="35">王作裝</t><t w="33">工作因</t><t w="31">王作因</t></item><item x="147" y="0" w="44" h="14"><t w="39">版本库</t><t w="34">版木库</t><t w="32">實本库</t><t w="30">「級本</t><t w="29">實木库</t><t w="22">「飯本</t><t w="22">「瓶本</t><t w="22">尸級本</t><t w="21">「綴本</t><t w="20">「緻本</t></item><item x="275" y="22" w="34" h="9"><t w="71">head</t><t w="36">日ea竄</t><t w="35">日ea玖</t><t w="35">日ead</t><t w="35">日ea肛</t><t w="35">日ea邸</t><t w="34">日吕ad</t><t w="34">鏈ea竄</t><t w="34">鏈ead</t><t w="34">鏈ea玖</t></item><item x="203" y="53" w="30" h="11"><t w="51">stage</t><t w="38">stag垂</t><t w="38">stag 。</t><t w="38">stag痞</t><t w="38">stag窃</t><t w="35">slag垂</t><t w="35">slag 。</t><t w="35">slag痞</t><t w="35">slag窃</t><t w="33">si吕轉</t></item><item x="105" y="56" w="24" h="11"><t w="73">add</t><t w="32">ad社</t><t w="32">吕社社</t><t w="32">霞社社</t><t w="31">吕社丝</t><t w="31">霞社丝</t><t w="31">吕社疗</t><t w="31">ad丝</t><t w="31">霞社疗</t></item><item x="363" y="53" w="38" h="9"><t w="56">master</t><t w="39">噸aster</t><t w="39">俞aster</t><t w="39">Masi ER</t><t w="39">mast ER</t><t w="38">喲aster</t><t w="37">Masi纽「</t><t w="37">mast纽「</t><t w="37">mast瞪「</t><t w="37">。 aster</t></item><item x="276" y="101" w="51" h="12"><t w="65">commit</t><t w="33">co mm IT</t><t w="33">co亢亢IT</t><t w="33">com亢IT</t><t w="33">co亢MIT</t><t w="33">co mm II</t><t w="33">co啃亢IT</t><t w="33">com MIT</t><t w="33">co亢亢II</t></item><item x="48" y="132" w="14" h="36"><t w="30">自</t><t w="18">目</t><t w="11">且</t></item><item x="363" y="165" w="26" h="5"><t w="32">V﹜</t></item><item x="391" y="166" w="13" h="17"><t w="59">自</t><t w="51">區</t><t w="49">由</t><t w="44">白</t></item><item x="391" y="185" w="13" h="17"><t w="59">自</t><t w="53">由</t><t w="51">區</t><t w="50">白</t></item><item x="15" y="46" w="29" h="30"><t w="29">結柏</t><t w="29">咖柏</t><t w="28">結由</t><t w="28">結帕</t><t w="28">結咱</t><t w="28">口柏</t><t w="27">訪柏</t><t w="27">咖帕</t><t w="27">咖由</t><t w="27">咖咱</t></item><item x="21" y="78" w="23" h="16"><t w="36">电</t><t w="35">帕</t><t w="34">碰</t><t w="33">眯</t></item><item x="21" y="96" w="23" h="23"><t w="37">縮</t><t w="35">陌</t><t w="33">蝠</t><t w="32">絕</t></item><item x="21" y="121" w="39" h="48"><t w="31">業钳</t><t w="30">業艙</t><t w="30">業铝</t><t w="30">業蛟</t><t w="29">痉钳</t><t w="29">痉艙</t><t w="29">痉铝</t><t w="28">痉蛟</t><t w="28">鈺钳</t><t w="28">鈺艙</t></item><item x="228" y="119" w="12" h="16"><t w="30">橋曰</t><t w="30">略曰</t><t w="29">铝曰</t><t w="29">橋凹</t><t w="28">略凹</t><t w="28">铝凹</t><t w="27">橋已</t><t w="27">略已</t><t w="26">铝已</t><t w="25">邑</t></item><item x="228" y="141" w="12" h="15"><t w="36">鸣曰</t><t w="35">给曰</t><t w="35">鸣白</t><t w="34">認曰</t><t w="34">鸣齡</t><t w="34">电曰</t><t w="34">鸣自</t><t w="34">给白</t><t w="33">認白</t><t w="33">给齡</t></item></recoIndex>
+]]></recognition><resource-attributes><source-url>file://C:\Users\admin\AppData\Local\Temp\enclipfiles\0.jpg</source-url><file-name>0.jpg</file-name></resource-attributes></resource></note></en-export>
