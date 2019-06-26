@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //数组的解构赋值
+        //解构成功
+        /* let [a,b,c] = [1,2,3];
+        console.log(a);//1
+        console.log(b);//2
+        console.log(c);//3 */
+        
+        /* let [head,...tail] = [1,2,3,4];
+        console.log(head);//1
+        console.log(tail);//2,3,4 */
+       
+       //解构不成功
+        /* let [foo] = [];
+        console.log(foo); */
+        /* let [bar,foo] = [1];
+        console.log(foo);//undefined */
+       
+        //不完全解构
+        /* let [x,y] = [1,2,3];
+        console.log(x);//1
+        console.log(y);//2 */
+       
+        /* let [a,[b],d] = [1,[2,3],4];
+        console.log(a);//1
+        console.log(b);//2
+        console.log(d);//4 */
+        
+        //对象的解构赋值
+        /* let{ bar ,foo } = { foo:'aaa',bar:'bbb'};
+        console.log(foo);//aa
+        console.log(bar);//bb
+        let {baz} = {foo:'aaa',bar:'bbb'};
+        console.log(baz);//undefined */
+        
+        /* let {foo:bar} = {foo:'aaa',bar:'bbb'};
+        console.log(bar);//aaa
+        console.log(foo);//foo is not defined
+        //foo是匹配的模式，baz才是变量。真正被赋值的是变量baz，而不是模式foo */
+        
+        //函数参数的解构赋值
+        /* function add([x,y]){
+            return x + y;
+        }
+        sum = add([1,2]);
+        console.log(sum);//3 */
+        
+        /* let arry; 
+        arry = [[1,2],[3,4]].map(([a,b]) => a + b);
+        console.log(arry);//[ 3, 7 ] */
+
+        //解构赋值的用途
+        //交换变量的值
+        /* let x = 1;
+        let y = 2;
+        [x,y] = [y,x];
+        console.log(x,y);// 2 1 */ 
+        
+        //从函数返回多个值
+        /* function example1(){
+            return [1,2,3];
+        }
+        let [a,b,c] = example1();
+        function example2(){
+            return {
+                foo:1,
+                bar:2
+            };
+        }
+        let {foo,bar} = example2();
+        console.log(a,b,c);//1 2 3 
+        console.log(foo,bar);// 1 2  */
+        
+        //提取 JSON 数据
+        /* let jsonDate = {
+            id: 42,
+            status: "OK",
+             data: [867,539]
+        };
+        let { id, status, data } = jsonDate;
+        console.log(id,status,data);//42 OK [ 867, 539 ] */
+
+        /* const map = new Map();
+        map.set('first', 'hello');
+        map.set('second', 'world');
+        for(let [,value] of map){
+            console.log(value);//hello world
+        } */
+       
+        //字符串
+        /* let x  = 1;
+        let y  = 2;
+        console.log( `${x} + ${y} = ${x + y}`);//1+2=3
+        console.log(`${x} + ${y * 2} = ${x + y * 2}`);//1+4=5
+        let obj = {x: 1,y: 2};
+        console.log(`${obj.x + obj.y}`);//3 */
+        
+        /* function fn(){
+            return "hello world";
+        }
+        console.log(`foo ${fn()} bar`);//foo hello world bar */
+        
+        /* let func = (name) => `Hello ${name}!`;
+        console.log(func('Jack'));//Hello Jack! */
+
+        /* includes()：返回布尔值，表示是否找到了参数字符串。
+        startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。
+        endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。 */
+        /* let s = 'hello world!';
+        console.log(s.includes('o'));//ture
+        console.log(s.startsWith('hello'));//true 
+        console.log(s.endsWith('!'));//true */
+
+        //repeat方法返回一个新字符串，表示将原字符串重复n次。
+        /* console.log('x'.repeat(3));//xxx
+        console.log('na'.repeat(-1));//RangeError */
+
+        /* //padStart()用于头部补全，padEnd()用于尾部补全。
+        console.log('x'.padStart(5,'ab'));//ababx
+        console.log('x'.padStart(4,'ab'));//abax
+        console.log('x'.padEnd(5,'ab'));//xabab
+        console.log('x'.padEnd(4,'ab'));//xaba */
+        
+        /* //如果用来补全的字符串与原字符串，两者的长度之和超过了最大长度，则会截去超出位数的补全字符串。
+        console.log('abc'.padStart(10,'0123456789'));//0123456abc
+        //padStart()的常见用途是为数值补全指定位数。
+        console.log('1'.padStart(10,'0'));//0000000001
+        console.log('12'.padStart(10,'0'));//0000000012
+        console.log('123456'.padStart(10,'0'));//0000123456 */
+
+        /* //trimStart()消除字符串头部的空格，trimEnd()消除尾部的空格
+        const s = ' abc ';
+        console.log(s.trim());//abc
+        console.log(s.trimStart());//abc 
+        console.log(s.trimEnd());// abc */
+
+        //正则表达式
+        //具名组匹配
+        /* const RE_DATE = /(\d{4})-(\d{2})-(\d{2})/;
+        const matchObj = RE_DATE.exec('2019-06-26');
+        const year = matchObj[1];
+        const month = matchObj[2];
+        const day = matchObj[3];
+        console.log(year,month,day);//2019 06 26 */
+        //ES2018 chrome可以，fox不可以
+        /* const RE_DATE = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/;
+        const matchObj = RE_DATE.exec('2019-06-27');
+        const year = matchObj.groups.year;
+        const month = matchObj.groups.month;
+        const day = matchObj.groups.day;
+        console.log(year,month,day);// 2019 06 27 */
+
+        //数值
+        /* console.log(Number.EPSILON);//可以接受的最小误差范围
+        console.log(Number.MAX_SAFE_INTEGER);
+        console.log(Number.MIN_SAFE_INTEGER);
+        //这两个常量，用来表示安全整数范围的上下限
+        let Y = Number.isSafeInteger(9007199254740990);
+        //是用来判断一个整数是否落在这个范围之内。
+        console.log(Y);//ture */
+        
+        //函数扩展
+        /* function m1({x = 0, y =0} = {}) {
+            return [x,y];
+        }
+        function m2({x,y} = { x:0 ,y:0 }){
+            return [x,y];
+        }
+        console.log(m1());//0,0
+        console.log(m2());//0,0 */
+
+        //函数的length属性
+        f1 = (function (a) {}).length; 
+        f2 = (function (a = 5) {}).length;
+        f3 = (function (a, b, c = 5) {}).length;
+        console.log(f1,f2,f3);// 1 0 2 
+        //length属性的返回值，等于函数的参数个数减去指定了默认值的参数个数
+        f4 = (function (a = 0, b, c) {}).length; // 0
+        f5 = (function (a, b = 1, c) {}).length; // 1
+        console.log(f4,f5);
+        //如果设置了默认值的参数不是尾参数，那么length属性也不再计入后面的参数了
+
+        //作用域
+
+
+
+    </script>
+</head>
+<body>
+   
+    
+</body>
+</html>
