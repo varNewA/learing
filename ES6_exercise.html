@@ -177,7 +177,7 @@
         console.log(m2());//0,0 */
 
         //函数的length属性
-        f1 = (function (a) {}).length; 
+        /* f1 = (function (a) {}).length; 
         f2 = (function (a = 5) {}).length;
         f3 = (function (a, b, c = 5) {}).length;
         console.log(f1,f2,f3);// 1 0 2 
@@ -185,10 +185,273 @@
         f4 = (function (a = 0, b, c) {}).length; // 0
         f5 = (function (a, b = 1, c) {}).length; // 1
         console.log(f4,f5);
-        //如果设置了默认值的参数不是尾参数，那么length属性也不再计入后面的参数了
+        //如果设置了默认值的参数不是尾参数，那么length属性也不再计入后面的参数了 */
 
         //作用域
+        /* let foo = 'outer';
+        function bar(func = () => foo){
+            let foo = 'inner';
+            console.log(func());
+        }
+        bar(); */
+        
+        //箭头函数
+        /* var sum = (num1,num2) => num1 + num2;
 
+        var sum = function(num1,num2){
+            return num1 + num2 ;
+        }; */
+
+        /* let insert = (value) => ({into:(array) => ({after:(afterValue) => {
+            array.splice(array.indexOf(afterValue) + 1,0,value);
+            return array;}})});
+        y = insert(2).into([1,3]).after(1);//1,2,3
+        console.log(y); */
+
+        /* function factorial(n, total) {
+            if (n === 1) return total;
+            return factorial(n - 1, n * total);
+        }
+        console.log(factorial(5, 1));//120 */
+
+        //数组 扩展运算符
+        //代替函数的apply方法
+        //ES5
+        /* A = Math.max.apply(null,[14,3,77]);
+        //ES6
+        B = Math.max(...[14,3,77]);
+        console.log(A);//77
+        console.log(B);//77 */
+
+        //数组合并
+        /* const arr1 = ['a', 'b'];
+        const arr2 = ['c'];
+        const arr3 = ['d', 'e'];
+        //ES5
+        let A = arr1.concat(arr2,arr3);
+        //ES6
+        let B = [...arr1,...arr2,...arr3];
+        console.log(A);//[ "a", "b", "c", "d", "e" ]
+        console.log(B);//[ "a", "b", "c", "d", "e" ]
+        //注意：上述方法为浅拷贝，如果修改了原数组的成员，会同步反映到新数组。 */
+
+        //map
+        /* let map = new Map([
+            [1,'one'],
+            [2,'two'],
+            [3,'three'],
+        ]);
+        
+        let arr = [...map.keys()];
+        console.log(arr);// 1,2,3 */
+
+        /* //array.from 方法，转为真正的数组
+        let arrayLike = {
+            '0' : 'a',
+            '1' : 'b',
+            '2' : 'c',
+            length: 3
+        }; */
+        //ES5
+        /* var arr1 = [].slice.call(arrayLike);
+        //ES6
+        let arr2 = Array.from(arrayLike);
+        console.log(arrayLike);
+        console.log(arr1);//[ "a", "b", "c" ]
+        console.log(arr2);//[ "a", "b", "c" ] */
+
+        /* Array.of(3, 11, 8);
+        let arr = Array(3);//一个参数时候，返回指定数组的长度
+        console.log(arr);
+        //Array.of 可代替Array()或者new Array()
+        //Array.of总是返回参数值组成的数组。如果没有参数，就返回一个空数组。 */
+
+        /* let arr = [1,2,3,4,5].copyWithin(0,3);
+        console.log(arr);// [ 4, 5, 3, 4, 5 ]
+        //target（必需）：从该位置开始替换数据。如果为负值，表示倒数。
+        //start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示从末尾开始计算。
+        //end（可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示从末尾开始计算。 */
+        
+        /* //find();
+        function f(v){
+            return v > this.age ;
+        }
+        let person = {name:'John',age:20};
+        let Y = [10,12,26,15].find(f,person);
+        console.log(Y);//26 */
+
+        /* //fill方法用于空数组的初始化非常方便。数组中已有的元素，会被全部抹去。
+        Y = ['a','b','c'].fill(7);
+        console.log(Y);//[7,7,7] */
+        /* Y = new Array(3).fill(7);
+        console.log(Y);//[7,7,7] */
+
+        //fill方法还可以接受第二个和第三个参数，用于指定填充的起始位置和结束位置。
+        /* Y = ['a','b','c'].fill(7,1,2);
+        console.log(Y);// [ "a", 7, "c" ] */
+
+        /* //flat(),拉平数组
+        let Y = [1,2,[3,[4,5]]].flat();
+        console.log(Y);//[ 1, 2, 3,[ 4 , 5 ]],默认拉平一层
+        
+        let N = [1,2,[3,[4,5]]].flat(2);
+        console.log(N);//[ 1, 2, 3, 4, 5 ]
+        //如果不管有多少层嵌套，都要转成一维数组，可以用Infinity关键字作为参数。
+        let W = [1,2,[3,[4,5]]].flat(Infinity);
+        console.log(W);//[ 1, 2, 3, 4, 5 ]
+        //如果原数组有空位，flat()会跳过空位
+        let M = [1,2,,4].flat();
+        console.log(M);//[1,2,4] */
+        //由于空位的处理规则非常不统一，所以建议避免出现空位。
+
+        //对象的扩展
+        /* let birth = '2000/01/01';
+        const Person = {
+            name : '张三',
+            birth,
+            hello(){
+                console.log('我的名字是',this.name);
+            }
+        }; 
+        Person.hello();//我的名字是 张三 */
+        
+        /* function getPoint() {
+            const x = 1;
+            const y = 10;
+            return  {x,y};
+        }
+        Y = getPoint();
+        console.log(Y);  //{ x: 1, y: 10 } */
+
+       //super，指向当前对象的原型对象。
+
+        //Class
+        //ES5
+        /* function Point(x,y) {
+            this.x = x;
+            this.y = y;
+        }
+        Point.prototype.toString = function(){
+            return '(' + this.x + ',' + this.y + ')';
+        };
+        var p = new Point(1,2);
+        console.log(p);//Object { x: 1, y: 2 } */
+        
+        //ES6
+        /* class Point{
+            constructor(x,y){
+                this.x = x;
+                this.y = y;
+            }
+            toString(){
+                return '(' + this.x + ',' + this.y + ')';
+            }
+            doStuff(){
+                console.log('stuff');
+            }
+        }
+        let p = new Point(3,2);
+        p.doStuff();
+        console.log(p);//Object { x: 3, y: 2 } */
+        
+        /* //采用 Class 表达式，可以写出立即执行的 Class。
+        let person = new class{
+            constructor(name){
+                this.name = name;
+            }
+            sayName(){
+                console.log(this.name);
+            }
+        }('张三');
+        
+        person.sayName(); */
+
+        /* //父类的静态方法可以被子类继承
+        class Foo{
+            static classMethod(){
+                return console.log('hello');
+            }
+        }
+        class Bar extends Foo{
+
+        }
+        Bar.classMethod();//hello */
+
+        /* //静态方法也是可以从super对象上调用的。
+        class Foo {
+            static classMethod() {
+                return 'hello';
+            }
+        }
+
+        class Bar extends Foo {
+            static classMethod() {
+                return super.classMethod() + ', too';
+            }
+        }
+
+        Y = Bar.classMethod();
+        console.log(Y);//hello, too */
+
+        //私有方法，私有属性-->利于代码封装，但是ES6不提供-->通过变通模拟实现 
+        //-->#
+        
+        /* class ColorPoint extends Point {
+            constructor(x, y, color) {
+                super(x, y); // 调用父类的constructor(x, y)
+                this.color = color;
+            }
+
+            toString() {
+                return this.color + ' ' + super.toString(); // 调用父类的toString()
+            }
+        }
+        //子类必须在constructor方法中调用super方法，否则新建实例时会报错 */
+
+        /* //在子类的构造函数中，只有调用super之后，才可以使用this关键字，否则会报错。
+        class Point {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+        }
+
+        class ColorPoint extends Point {
+            constructor(x, y, color) {
+                this.color = color; // ReferenceError
+                super(x, y);
+                this.color = color; // 正确
+            }
+        } */
+
+        /* //父类的静态方法，也会被子类继承
+        class A{
+            static hello(){
+                console.log('hello world');
+            }
+        }
+        class B extends A{
+
+        }
+        B.hello();//hello world */
+
+        /* Object.getPrototypeOf(ColorPoint) === Point//该方法来判断，一个类是否继承了另一个类。 */
+        //作为函数时，super()只能用在子类的构造函数之中
+
+        //ES6 允许继承原生构造函数定义子类
+
+        //Mixin模式：Mixin 指的是多个对象合成一个新的对象，新对象具有各个组成成员的接口。
+        /* const a = {
+            a : 'a'
+        };
+        const b = {
+            b : 'b'
+        };
+        const c = {...a,...b};
+        console.log(c);//{ a: "a", b: "b" } */
+
+        //Module语法
+        
 
 
     </script>
