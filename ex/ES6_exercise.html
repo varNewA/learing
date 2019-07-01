@@ -452,6 +452,26 @@
 
         //Module语法
         
+        /* const f = () => console.log('now');
+        Promise.resolve().then(f);
+        console.log('next');//next
+                            //now */
+
+        /* const f = () => console.log('now');
+        (async () => f())();
+        console.log('next');//now
+                            //next */
+        /* async function f() {
+            throw new Error('出错了');
+        }
+
+        f().then(
+            v => console.log(v),
+            e => console.log(e)
+        ) */
+
+        
+        
 
 
     </script>
